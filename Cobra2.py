@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 
 # --- CONFIG --- #
 TARGET = "https://primexbt.com"  # Use the site's API/test environment
-LOGIN_URL = "https://primexbt.com/login"
+LOGIN_URL = "https://primexbt.com/id/sign-in?_lang=en"
 AUTH_DATA = {"email": "mormonmor@outlook.com", "password": "Mehdi1234"}  # Use test credentials
 HEADERS = {
     "User-Agent": "SecurityScanner/1.0",
