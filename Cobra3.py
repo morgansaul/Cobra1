@@ -206,7 +206,7 @@ class DEXScanner:
     def _fetch_js_code(self) -> str:
         """Fetch and combine JavaScript files"""
         html = self._fetch_html()
-        js_files = list(set(re.findall(r'src="([^"]+\.js)"', html))[:5]  # Top 5 JS files
+js_files = list(set(re.findall(r'src="([^"]+\.js)"', html)))[:5]  # Top 5 JS files
         
         combined_js = ""
         for js_file in js_files:
