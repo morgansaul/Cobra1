@@ -217,7 +217,7 @@ for js_file in js_files:
                 time.sleep(self.request_delay)
             except:
                 continue
-        return combined_js
+    return combined_js
 
     def _match_patterns(self, content: str, patterns: List[tuple], context: str):
         """Helper to match patterns against content"""
