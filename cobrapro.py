@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+import websockets  # Required for WebSocket tests
+import requests    # Required for API tests
+import asyncio     # Required for async operations
+import json        # Required for payload handling
 import argparse
-import asyncio
 import csv
-import json
 import hmac
 import hashlib
 import random
