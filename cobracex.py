@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import websockets
+import requests
+import asyncio
+import json
 import argparse
 import asyncio
 import hmac
