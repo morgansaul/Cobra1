@@ -6,8 +6,8 @@ from slither import Slither
 from typing import Dict, List, Optional
 
 # ===== Config =====
-ETHERSCAN_API_KEY = "YOUR_ETHERSCAN_API_KEY"  # Replace with your key
-WEB3_PROVIDER_URL = "https://mainnet.infura.io/v3/YOUR_INFURA_KEY"  # Or Alchemy, QuickNode, etc.
+ETHERSCAN_API_KEY = "MDMC7E2W745BSYW7ZR579EWNEP7MTM5AWX"  # Replace with your key
+WEB3_PROVIDER_URL = "https://mainnet.infura.io/v3/ced43c7c966041d6ad519a876591e67c"  # Or Alchemy, QuickNode, etc.
 
 # ===== Initialize Web3 =====
 w3 = Web3(Web3.HTTPProvider(WEB3_PROVIDER_URL))
